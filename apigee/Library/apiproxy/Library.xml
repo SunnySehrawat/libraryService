@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="Library">
+    <Basepaths>/library</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1526029024263</CreatedAt>
+    <CreatedBy>iamsunnysehrawat@gmail.com</CreatedBy>
+    <Description>LibraryService</Description>
+    <DisplayName>LibraryService</DisplayName>
+    <LastModifiedAt>1526029024263</LastModifiedAt>
+    <LastModifiedBy>iamsunnysehrawat@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:cb1a8663ac8d9cc60e59b965f0861b34243c11f0c937e57c4e570750eda259234918af8c0e2d33cf83cf3ed816e68414e8ed965fc3fd441a9f4bd9ad3af83f83</ManifestVersion>
+    <Policies>
+        <Policy>Assign_setTarget-countAllAuthers</Policy>
+        <Policy>Extract_headers</Policy>
+        <Policy>addBook-add-namespace</Policy>
+        <Policy>addBook-add-soapaction</Policy>
+        <Policy>addBook-json-to-xml</Policy>
+        <Policy>findEntriesByAuthor-build-soap</Policy>
+        <Policy>findEntriesByAuthor-extract-query-param</Policy>
+        <Policy>get-response-soap-body-xml</Policy>
+        <Policy>get-response-soap-body</Policy>
+        <Policy>remove-empty-nodes</Policy>
+        <Policy>remove-namespaces</Policy>
+        <Policy>return-generic-error-accept</Policy>
+        <Policy>return-generic-error</Policy>
+        <Policy>set-response-soap-body-accept</Policy>
+        <Policy>set-response-soap-body</Policy>
+        <Policy>xml-to-json</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>xsl://addBook-add-namespace.xslt</Resource>
+        <Resource>xsl://remove-empty-nodes.xslt</Resource>
+        <Resource>xsl://remove-namespaces.xslt</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

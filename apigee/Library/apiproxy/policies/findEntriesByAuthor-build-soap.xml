@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="true" enabled="true" name="findEntriesByAuthor-build-soap">
+    <DisplayName>findEntriesByAuthor Build SOAP</DisplayName>
+    <Add>
+        <Headers>
+            <Header name="SOAPAction"/>
+        </Headers>
+    </Add>
+    <Set>
+        <Headers>
+            <Header name="Content-Type">text/xml; charset=utf-8</Header>
+        </Headers>
+        <Payload contentType="text/xml">
+<s11:Envelope xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/">  <s11:Body>    <ns1:findEntriesByAuthor xmlns:ns1="urn:librarysample.services.apigee.com">
+<!-- optional -->      <ns1:author>{author}</ns1:author>    </ns1:findEntriesByAuthor>  </s11:Body>
+</s11:Envelope>
+</Payload>
+        <Verb>POST</Verb>
+    </Set>
+    <AssignVariable>
+        <Name>forward.target.url</Name>
+        <Value>http://library-soap.herokuapp.com:80/Library</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
